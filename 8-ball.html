@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Ball</title>
+    <style>
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.question{
+    width: 80%;
+}
+
+.answer{
+    border: 2px solid none;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-image:radial-gradient(white,gray,black);
+    font-weight: bold;
+    position: relative;
+}
+
+section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 200px;
+}
+
+.animatedAnswer{
+    animation-name: answer 1s ease-in-out forwards;
+    background-color: red;
+    transition-property: backgroundcolor;
+    transition-duration: 1s;
+}
+
+@keyframes answer{
+    0%{
+        transform: scaleZ(0);
+    }
+    50%{
+        transform: scaleZ(50%);
+    }
+    100%{
+        transform: scaleZ(100%);
+    }
+}
+    </style>
+</head>
+
+<body>
+    <h1>8-Ball</h1>
+    <h3>Rules:</h3>
+    <p class="rules">-Ask any question and get a yes,no or maybe <br>
+        -To get answer, either put a question mark at the end of the qestion, hit enter or hit the Answer button below <br>
+    </p>
+    <label calss="label">Question?:</label>
+    <br>
+    <input class="question" onkeydown="
+        if (event.key ==='Enter') {
+            eightBall();
+        }">
+    <br>
+    <br>
+    <button class="js-button answerButton"  
+        onclick=" eightBall();">Answer</button>
+    
+    <section id="container">
+    <p class="answer"></p>
+    </section>
+    <script>
+        function eightBall() {
+
+randomAnswer = Math.random();
+let reveal = document.querySelector('.answer');
+
+if (randomAnswer >= 0 && randomAnswer <1/3) {
+    reveal='Yes.';
+    document.querySelector('.answer').innerHTML = `${reveal}`;
+    reveal.classList.add('animatedAnswer');
+}
+else if (randomAnswer >=1/3 && randomAnswer <2/3) {
+    reveal='No.';
+    document.querySelector('.answer').innerHTML = `${reveal}`;
+    reveal.classList.add('animatedAnswer');
+}
+else if (randomAnswer >=2/3 && randomAnswer  <1) {
+    reveal='Maybe.';
+    document.querySelector('.answer').innerHTML = `${reveal}`;
+    reveal.classList.add('animatedAnswer');
+}
+
+/* document.querySelector('.answer').innerHTML = `${reveal}`;
+reveal.classList.add('animatedAnswer'); */
+
+
+}
+    </script>
+</body>
+</html>
