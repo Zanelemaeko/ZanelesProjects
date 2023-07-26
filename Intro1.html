@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backsit Podcast intro 1</title>
+    <style>
+      body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*blocks 1-20*/
+.main_square{
+    position: relative;
+    height: 600px;
+    width: 500px;
+    border: 2px dashed red;
+}
+
+.sub_container{
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    border: 1px solid white
+}
+
+.block1{
+    position: absolute;
+    top:-200px;
+    left: 0;
+    background-color: red;  
+}
+
+.block2{
+    position: absolute;
+    top:-200px;
+    left: 125px;
+    background-color: red; 
+
+}
+.block3{
+    position: absolute;
+    top:-200px;
+    right: 125px;
+    background-color: red; 
+}
+.block4{
+    position: absolute;
+    top:-200px;
+    right: 0;
+    background-color: red; 
+}
+
+.block5{
+    position: absolute;
+    top:-200px;
+    left: 0;
+    background-color: yellow;  
+}
+
+.block6{
+    position: absolute;
+    top:-200px;
+    left: 100px;
+    background-color: yellow; 
+
+}
+.block7{
+    position: absolute;
+    top:-200px;
+    right: 100px;
+    background-color: yellow; 
+}
+.block8{
+    position: absolute;
+    top:-200px;
+    right: 0;
+    background-color: yellow; 
+}
+
+.block9{
+    position: absolute;
+    top:-200px;
+    left: 0;
+    background-color: blue;  
+}
+
+.block10{
+    position: absolute;
+    top:-200px;
+    left: 100px;
+    background-color: blue; 
+
+}
+.block11{
+    position: absolute;
+    top:-200px;
+    right: 100px;
+    background-color: blue; 
+}
+.block12{
+    position: absolute;
+    top:-200px;
+    right: 0;
+    background-color: blue; 
+}
+
+.block13{
+    position: absolute;
+    top:-300px;
+    left: 0;
+    background-color: green;  
+}
+
+.block14{
+    position: absolute;
+    top:-300px;
+    left: 125px;
+    background-color: green; 
+
+}
+.block15{
+    position: absolute;
+    top:-300px;
+    right: 100px;
+    background-color: green; 
+}
+.block16{
+    position: absolute;
+    top:-300px;
+    right: 0;
+    background-color: green; 
+}
+
+
+.block17{
+    position: absolute;
+    top:-400px;
+    left: 0;
+    background-color: orange;  
+}
+
+.block18{
+    position: absolute;
+    top:-400px;
+    left: 100px;
+    background-color: orange; 
+
+}
+.block19{
+    position: absolute;
+    top:-400px;
+    right: 100px;
+    background-color: orange; 
+}
+.block20{
+    position: absolute;
+    top:-400px;
+    right: 0;
+    background-color: orange; 
+}
+
+img{
+    position: absolute;
+    width: 125px;
+    height: 120px;
+}
+
+/*animations 1-20*/
+.block1{
+    animation: block1 2s ease-in-out 8.5s forwards;
+}
+
+@keyframes block1{
+    0%{
+        position: absolute;
+        top: -1400px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(0);
+    }
+}
+
+.block2{
+    animation: block2 2s ease-in-out 9s forwards;
+}
+@keyframes block2{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 100px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 0;
+        left: 125px;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 0;
+        left: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block3{
+    animation: block3 2s ease-in-out 9.5s forwards;
+}
+@keyframes block3{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 200px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 0;
+        right: 125;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 0;
+       right: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block4{
+    animation: block4 2s ease-in-out 10s forwards;
+}
+@keyframes block4{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 300px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(0);
+    }
+}
+
+.block5{
+    animation: block5 2s ease-in-out 8s forwards;
+}
+
+@keyframes block5{
+    0%{
+        position: absolute;
+        top: -1400px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 120px;
+        left: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 120px;
+        left: 0;
+        transform: translateY(0);
+    }
+}
+
+.block6{
+    animation: block6 2s ease-in-out 7.5s forwards;
+}
+@keyframes block6{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 100px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 120px;
+        left: 125px;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 120px;
+        left: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block7{
+    animation: block7 2s ease-in-out 7s forwards;
+}
+@keyframes block7{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 200px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 120px;
+        right: 125px;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 120px;
+        right: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block8{
+    animation: block8 2s ease-in-out 6.5s forwards;
+}
+@keyframes block8{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 300px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 120px;
+        right: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 120px;
+        right: 0;
+        transform: translateY(0);
+    }
+}
+
+.block9{
+    animation: block9 2s ease-in-out 4.5s forwards;
+}
+
+@keyframes block9{
+    0%{
+        position: absolute;
+        top: -1400px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 240px;
+        left: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 240px;
+        left: 0;
+        transform: translateY(0);
+    }
+}
+
+.block10{
+    animation: block10 2s ease-in-out 5s forwards;
+}
+@keyframes block10{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 100px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 240px;
+        left: 125px;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 240px;
+        left: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block11{
+    animation: block11 2s ease-in-out 5.5s forwards;
+}
+@keyframes block11{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 200px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 240px;
+        right: 125px;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top:240px;
+        right: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block12{
+    animation: block12 2s ease-in-out 6s forwards;
+}
+@keyframes block12{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 300px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 240px;
+        right: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 240px;
+        right: 0px;
+        transform: translateY(0);
+    }
+}
+
+.block13{
+    animation: block13 2s ease-in-out 4s forwards;
+}
+
+@keyframes block13{
+    0%{
+        position: absolute;
+        top: -1400px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 360px;
+        left: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 360px;
+        left: 0;
+        transform: translateY(0);
+    }
+}
+
+.block14{
+    animation: block14 2s ease-in-out 3.5s forwards;
+}
+@keyframes block14{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 100px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 360px;
+        left: 125px;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 360px;
+        left: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block15{
+    animation: block15 2s ease-in-out 3s forwards;
+}
+@keyframes block15{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 200px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 360px;
+        right: 125px;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 360px;
+        right: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block16{
+    animation: block16 2s ease-in-out 2.5s forwards;
+}
+@keyframes block16{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 300px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 360px;
+        right: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 360px;
+        right: 0px;
+        transform: translateY(0);
+    }
+}
+
+.block17{
+    animation: block17 2s ease-in-out 0.5s forwards;
+}
+
+@keyframes block17{
+    0%{
+        position: absolute;
+        top: -1400px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 480px;
+        left: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 480px;
+        left: 0;
+        transform: translateY(0);
+    }
+}
+
+.block18{
+    animation: block18 2s ease-in-out 1s forwards;
+}
+@keyframes block18{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 100px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 480px;
+        left: 125px;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 480px;
+        left: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block19{
+    animation: block19 2s ease-in-out 1.5s forwards;
+}
+@keyframes block19{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 200px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 480px;
+        right: 125px;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 480px;
+        right: 125px;
+        transform: translateY(0);
+    }
+}
+
+.block20{
+    animation: block20 2s ease-in-out 2s forwards;
+}
+@keyframes block20{
+    0%{
+        position: absolute;
+        top: -1400px;
+        left: 300px;
+        transform: translateY(-1400%);
+    }
+    80%{
+        position: absolute;
+        top: 480px;
+        right: 0;
+        transform: scale(120%);
+    }
+    100%{
+        position: absolute;
+        top: 480px;
+        right: 0px;
+        transform: translateY(0);
+    }
+}
+
+.main_square{
+    animation: rotate 3s ease-in-out 11s forwards;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotateZ(0);
+    }
+    80%{
+        transform: rotateZ(720deg) scale(50%);
+    }
+    100%{
+        transform: rotateZ(0) scale(100%);
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="main_square">
+        <div class="sub_container block1">
+           <!--  <img src="Images/block1.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block2">
+          <!--   <img src="Images/block2.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block3">
+          <!--   <img src="Images/block3.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block4">
+           <!--  <img src="Images/block4.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block5">
+         <!--    <img src="Images/block5.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block6">
+           <!--  <img src="Images/block6.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block7">
+          <!--   <img src="Images/block7.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block8">
+          <!--   <img src="Images/block8.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block9">
+           <!--  <img src="Images/block9.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block10">
+           <!--  <img src="Images/block10.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block11">
+           <!--  <img src="Images/block11.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block12">
+          <!--   <img src="Images/block12.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block13">
+          <!--   <img src="Images/block13.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block14">
+          <!--   <img src="Images/block14.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block15">
+          <!--   <img src="Images/block15.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block16">
+           <!--  <img src="Images/block16.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block17">
+            <!-- <img src="Images/block17.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block18">
+           <!--  <img src="Images/block18.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block19">
+           <!--  <img src="Images/block19.png" alt=""> -->
+        </div>
+
+        <div class="sub_container  block20">
+           <!--  <img src="Images/block20.png" alt=""> -->
+        </div>
+    </div>
+</body>
+</html>
