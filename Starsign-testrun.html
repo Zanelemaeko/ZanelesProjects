@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Whats my starsign?</title>
+        <link rel="icon" href="images/html5.png" type="image/x-icon">
+        <style>
+                html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(black,gray,white);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: url('stars.jpg') ;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+} 
+
+
+.day{
+    font-weight: bolder;
+    color: white;
+}
+
+.js-day{
+    width: 40px;
+    height: 30px;
+    border-radius: 5PX;
+    border: 2px solid black;
+    box-shadow: 5px 5px  5px black;
+    text-align: center;
+}
+
+.js-month{
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 5px 5px  5px black;
+    text-align: center;
+}
+
+button{
+    border-radius: none;
+    background-color: lightgray;
+    border: none;
+    width: 70px;
+    height: 30px;
+}
+
+.js-output{
+    border: 2px solid white;
+    width: 500px;
+    height: 150px;
+    padding-top:5px;
+    padding-left: 5px;
+    color: white;
+    font-style: italic;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+span{
+    color: lightgrey;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.instructions{
+    margin-top: 0;
+    color: white;
+}
+
+.explanation{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+}
+
+footer{
+    color: white;
+    width: 650px;
+    height: 50px;
+    background-color: pink;
+    text-align: center;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+
+}
+
+@media  screen and (min-width:320px) {
+    html{
+        background-image: none;
+        width: 100%;
+    }
+    body{
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .js-output{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    html{
+        background-image: none;
+        width: 100%;
+    }
+    body{
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .js-output{
+        width: 700px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    html{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(black,gray,white);
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-left: 2px solid whitesmoke;
+        border-right: 2px solid whitesmoke;
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .js-output{
+        width: 500px;
+        height: 200px;
+    }
+}
+
+
+
+        </style>
+</head>
+<body> 
+        <h1>What are horoscopes?</h1>
+        <p class="explanation">Horoscope, in astrology, a chart of the heavens, showing the relative positions of the Sun, the Moon, the planets, and the ascendant and midheaven signs of the zodiac at a specific moment in time. A horoscope is used to provide information about the present and to predict events to come.
+
+        An individual horoscope usually plots the moment of birth and is used by astrologers to analyze character, as well as—in conjunction with other astrological data—to predict the future. This is in accordance with the belief that each celestial body has its own mythological character, modified according to its geometric relationship with the other celestial bodies at a given moment. Everything in the universe being interrelated, these bodies exert an influence, particularly on the newborn. In casting a horoscope, the heavens are commonly represented by a circle divided into 12 intersections, called houses. Each of these houses is assigned several departments of human life, such as wealth or marriage. The planet that falls within a particular house is said to influence matters pertaining to that house.</p>
+        <h2>instructions</h2>
+        <p class="instructions">-Numbers must be between 1-31. no higher and no lower <br>
+        -Months must be written in lowercase. no abbraviations. <br>
+        -If you hit "RUN" and nothing happens. Either day or month are enetered incorrectly.</p>
+
+        <label class="day">Day:</label>
+        <input class="js-day" placeholder="Eg.1" onkeydown="
+        if (event.key === 'Enter') {
+                document.querySelector('.js-month');
+        }">
+<br>
+<br>
+        <label class="day">Month:</label>
+        <input class="js-month" placeholder="Eg.january" onkeydown="
+                if (event.key === 'Enter') {
+                        starSign();
+                }">
+<br> 
+<br>
+        <button onclick="
+                starSign();
+        ">RUN</button>
+
+        <p class="js-output"> <span>Your starsign is..</span> </p>
+
+        <footer>
+                <p>&copy; 2023 Starsign Generator</p>
+        </footer>
+        <script>
+                const library = { /*library for the signs*/
+Aquarius:'Aquarius.Aquarius is actually the last air sign of the zodiac. Innovative, progressive, and shamelessly revolutionary, Aquarius is represented by the water bearer, the mystical healer who bestows water, or life, upon the land. Accordingly, Aquarius is the most humanitarian astrological sign. At the end of the day, Aquarius is dedicated to making the world a better place.', 
+
+Picses:'Pisces. Pisces is the most intuitive, sensitive, and empathetic sign of the entire zodiac — and that\'s because it\'s the last of the last. As the final sign, Pisces has absorbed every lesson — the joys and the pain, the hopes and the fears — learned by all of the other signs. It\'s symbolized by two fish swimming in opposite directions, representing the constant division of Pisces\' attention between fantasy and reality.', 
+
+Aries:'Aries. Aries loves to be number one. Naturally, this dynamic fire sign is no stranger to competition. Bold and ambitious, Aries dives headfirst into even the most challenging situations and they\'ll make sure they always come out on top', 
+
+Taurus:'Taurus. Taurus is an earth sign represented by the bull. Like their celestial spirit animal, Taureans enjoy relaxing in serene, bucolic environments surrounded by soft sounds, soothing aromas, and succulent flavors.', 
+
+Gemini:'Gemini. Gemini\'s are Spontaneous, playful, and adorably erratic, Gemini is driven by its insatiable curiosity. Appropriately symbolized by the celestial twins, this air sign was interested in so many pursuits that it had to double itself.', 
+
+Cancer:'Cancer. Cancer seamlessly weaves between the sea and shore representing Cancers ability to exist in both emotional and material realms. Cancers are highly intuitive and their psychic abilities manifest in tangible spaces. But—just like the hard shelled crustaceans-this water sign is willing to do whatever it takes to protect itself emotionally. In order to get to know this sign, you\'re going to need to establish trust',
+
+Leo:'Leo. Leo\'s are Passionate, loyal, and infamously dramatic, Leo is represented by the lion and these spirited fire signs are the kings and queens of the celestial jungle. They\'re delighted to embrace their royal status: Vivacious, theatrical, and fiery, Leos love to bask in the spotlight and celebrate… well, themselves.', 
+
+Virgo:'Virgo. Virgo\'s are logical, practical, and systematic in their approach to life. Virgo is an earth sign historically represented by the goddess of wheat and agriculture, an association that speaks to Virgo\'s deep-rooted presence in the material world. This earth sign is a perfectionist at heart and isn\'t afraid to improve skills through diligent and consistent practice.', 
+
+Libra:'Libra. As a cardinal air sign, Libra is represented by the scales (interestingly, the only inanimate object of the zodiac), an association that reflects Libra\'s fixation on establishing equilibrium. Libra is obsessed with symmetry and strives to create equilibrium in all areas of life — especially when it comes to matters of the heart', 
+
+Scorpio:'Scorpion. Scorpio is one of the most misunderstood signs of the zodiac. Scorpio is a water sign that uses emotional energy as fuel, cultivating powerful wisdom through both the physical and unseen realms. In fact, Scorpio derives its extraordinary courage from its psychic abilities, which is what makes this sign one of the most complicated, dynamic signs of the zodiac', 
+
+Sagitarius:'Sagitarius. This fire sign knows no bounds. Represented by the archer, Sagittarians are always on a quest for knowledge. The last fire sign of the zodiac, Sagittarius launches its many pursuits like blazing arrows, chasing after geographical, intellectual, and spiritual adventures.', 
+
+Capricorn:'Capricorn. Capricorn is climbing the mountain straight to the top and knows that patience, perseverance, and dedication is the only way to scale. The last earth sign of the zodiac, Capricorn, is represented by the sea-goat, a mythological creature with the body of a goat and the tail of a fish. Accordingly, Capricorns are skilled at navigating both the material and emotional realms.' 
+};
+
+function starSign() {
+
+let dayValue = Number(document.querySelector('.js-day').value);
+let monthValue = String(document.querySelector('.js-month').value);
+
+if (dayValue >=20 && dayValue <=31 && monthValue === 'january' ) { /* jan20-feb18*/
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Aquarius}`;
+}
+else if (dayValue >=1 && dayValue <=18 && monthValue === 'febuary') {
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Aquarius}`;
+}
+
+else if (dayValue >=19 && dayValue  <=28 && monthValue=== 'febuary' ) { /*feb19-march20 feb ends on 28*/
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Picses}`;
+}
+
+else if (dayValue >=1 && dayValue  <=20 && monthValue=== 'march') { 
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Picses}`;
+}
+ 
+else if (dayValue >=21 && dayValue <=31 && monthValue ==='march') { /*march21-april19*/
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Aries}`;
+}
+
+else if (dayValue >=1 && dayValue <=19 && monthValue ==='april') { 
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Aries}`;
+}
+
+else if (dayValue >=20 && dayValue <=31 && monthValue === 'april') { /*april20-may20 apr ends on 30*/
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Taurus}`;
+}
+
+else if (dayValue >=1 && dayValue <=20 && monthValue === 'may') { 
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Taurus}`;
+}
+
+if (dayValue >=21 && dayValue <=31 && monthValue=== 'may') { /*may21-june20*/
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Gemini}`;
+}
+
+if (dayValue >=1 && dayValue <=20 && monthValue=== 'june') { 
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Gemini}`;
+}
+
+if (dayValue >=21 && dayValue <=30 && monthValue==='june') { /*june21-july21 june ends on 30*/
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Cancer}`;
+}
+
+if (dayValue >=1 && dayValue <=22 && monthValue==='july') { 
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Cancer}`;
+}
+
+if (dayValue >=23 && dayValue <=31 && monthValue==='july') { /*july23-aug22*/
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Leo}`;
+}
+
+if (dayValue >=1 && dayValue <=22 && monthValue==='august') { 
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Leo}`;
+}
+
+if (dayValue >=23 && dayValue <=31 && monthValue==='august') { /*aug23-sep22*/
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Virgo}`;
+}
+
+if (dayValue >=1 && dayValue <=22 && monthValue==='septemeber' ) {
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Virgo}`;
+}
+
+if (dayValue >=23 && dayValue <=30 && monthValue==='septemeber' ) { /*sep23-oct22 sep ends on 30*/
+   document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Libra}`;
+}
+
+if (dayValue >=1 && dayValue <=22 && monthValue==='october') { /*sep23-oct22 sep ends on 30*/
+   document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Libra}`;
+}
+
+if (dayValue >=23 && dayValue <=31 && monthValue==='october') { /*oct23-nov21*/
+   document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Scorpio}`;
+}
+
+if (dayValue >=1 && dayValue <=21 && monthValue==='novemebr') { 
+   document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Scorpio}`;
+}
+
+if (dayValue >=22 && dayValue <=30 && monthValue==='november') { /*nov22-dec21 nov ends on 30*/
+   document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Sagitarius}`;
+}
+
+if (dayValue >=1 && dayValue <=21 && monthValue==='december') { 
+   document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Sagitarius}`;
+}
+
+if (dayValue >=22 && dayValue <=31 && monthValue==='december') { /*dec22-jan19*/
+   document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Capricorn}`;
+}
+
+if (dayValue >=1 && dayValue <=19 && monthValue==='january') { 
+    document.querySelector('.js-output').innerHTML=`Your star sign is ${library.Capricorn}`;
+}
+}
+
+/* 
+function starSign() {
+    let dayValue = Number(document.querySelector('.js-day').value);
+   let monthValue = String(document.querySelector('.js-month').value);
+
+   console.log(dayValue);
+   console.log(monthValue);
+   console.log(library.virgo);
+
+   if (dayValue<10 && monthValue === 'september') {
+    document.querySelector('.js-output').innerHTML='virgo';
+   }
+   else{
+    document.querySelector('.js-output').innerHTML=`${library.Virgo}`;
+   }
+} */
+
+        </script>
+</body>
+</html>
