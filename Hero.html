@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="" type="image/x-icon">
+    <style>
+        html{
+    scroll-behavior: smooth;
+    width: fit-content;
+    background-image: linear-gradient(lightblue, rgba(164, 4, 4, 0.482));
+}
+
+/*ANIAMTIONS*/
+.sub_square:hover{
+   /*  animation-name: spinner;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; */
+    animation: spinner 1s ease-in-out forwards;
+    background-color: lightblue;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+@keyframes spinner{
+    0%{
+        transform: scale(100%) rotate(45deg);
+    }
+    100%{
+        transform: scale(120%) rotate(45deg);
+    }
+}
+
+.sub_card:hover{
+    animation: characters 1s ease-in-out forwards;
+}
+
+@keyframes characters{
+    0%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(120%);
+    }
+}
+
+header{
+    animation: extend 2s ease-in-out forwards;
+}
+
+@keyframes extend{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(100%);
+    }
+}
+
+/*HEADING*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.super_hero{
+    font-weight: bolder;
+    color: red;
+    text-shadow: 10px 10px 3px rgb(0, 55, 255);
+}
+
+/*BORDERS*/
+
+.main_square{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+.square{
+    border: 2px solid red;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    font-weight: bolder;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.sub_square{
+    border: 1px solid black;
+    border-radius:5px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transform: rotate(45deg);
+}
+
+.description{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    margin-right: 17px;
+   
+}
+
+footer{
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(red, orange);
+}
+
+/*CHARATCTER CARDS*/
+.main_card{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.sub_card{
+    border: 2px dashed red;
+    border-radius: 5px;
+    height: 330px;
+    width: 170px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    padding-bottom: 50px;
+    display: block;
+    flex-flow: column;
+    text-align: center;
+    padding-left: 25px;
+}
+
+.card{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 150px;
+    width: 150px;
+    display: block;
+    flex-flow: column nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;  
+   
+}
+
+.card img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1px solid lime;
+    text-align: center;
+}
+.card figcaption{
+    padding-top:10px;
+    text-align: center; 
+}
+
+/*GENERAL STYLING*/
+.square a{
+    text-decoration: none;
+    color: black;
+}
+
+.square a:hover, a:focus{
+    color:white
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="super_hero">The Super HERO</h1>
+    </header>
+    <nav class="main_square">
+        
+        <div class="sub_square"> 
+            <div class="square"> <a href="#setting">Setting</a></div>
+        </div>
+
+        <div class="sub_square">
+            <div class="square"> <a href="#characters">Characters</a></div>
+        </div>
+
+        <div class="sub_square">
+            <div class="square"><a href="#powers">Powers</a></div>
+        </div>
+
+        <div class="sub_square">
+            <div class="square"><a href="#villians">Villians</a></div>
+        </div>
+
+        <div class="sub_square">
+            <div class="square"><a href="#plot">Plot</a></div>
+        </div>
+        
+        <div class="sub_square">
+            <div class="square"></div>
+        </div>
+    </nav>
+<br>
+<section id="setting">
+    <p>
+        <h1>Setting</h1>
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos numquam tempore, expedita, enim accusantium atque quidem qui modi recusandae vero illo placeat praesentium doloremque, libero saepe ipsam laboriosam. Saepe, ratione.
+       Commodi, maiores. Cumque ducimus minima nesciunt molestiae nobis! Reiciendis nemo doloribus, repellendus, incidunt blanditiis aliquid assumenda provident, molestiae obcaecati similique sequi sit voluptates. Dolore et perferendis aliquam suscipit reprehenderit possimus?
+       Ipsa fugiat aperiam maxime, quaerat dicta nihil laudantium tempora ratione consequuntur, exercitationem mollitia eum nobis omnis sunt cumque eos iusto obcaecati molestias voluptas. Praesentium laudantium, voluptate maxime itaque a consectetur.
+       Officiis fugit quam iste, exercitationem autem perferendis maiores atque nemo laborum accusantium modi voluptas est quo praesentium hic repellat voluptate natus officia expedita at. Nobis ea provident minus quaerat dolorum.
+       Dicta nobis iure ullam facilis debitis rerum, nostrum ad sunt earum, impedit perferendis nemo magnam, beatae eveniet fugit voluptatum tenetur ipsum? Vero adipisci repellat quae unde, eveniet temporibus provident beatae.
+    </p>
+</section>
+
+<section id="characters">
+    <p>
+        <h1>characters</h1>
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dignissimos qui nemo quibusdam debitis possimus provident tempore recusandae architecto corrupti. Sit sint architecto consectetur, ipsa tempore itaque nihil qui deleniti.
+       Ipsa vel tempore accusantium rem iure delectus autem deserunt, odit doloremque veniam, cum expedita obcaecati quia eaque. Magnam sapiente laborum quasi vel expedita cum numquam veniam minus. Harum, deleniti qui!
+    </p>
+    <div class="main_card">
+        <div class="sub_card">
+        <div class="card card_1"> 
+            <img src="" alt="not available">
+            <figcaption>
+                "The hero"
+            </figcaption>
+        </div>
+        <div class="description">
+            A simple man living a simple life with his wife in a small town but with the biggest secret.
+        </div>
+    </div>
+
+        <div class="sub_card">
+        <div class="card card_2">
+            <img src="" alt="not available">
+            <figcaption>
+                "Heros wife"
+            </figcaption>
+        </div>
+        <div class="description">
+            A one of the kindest, sweetest and most caring woman you'll ever find but what really shines is her beauty. She can makes heads double take whereever she steps foot. Althought sweet she can be ruthless when she needs too.
+        </div>
+        </div>
+
+        <div class="sub_card">
+        <div class="card card_3">
+            <img src="" alt="not available">
+            <figcaption>
+                "King"
+            </figcaption>
+        </div>
+        <div class="description">
+            Being king and having power is great but every person desires love. But its difficult to find someone special when and have violenece rolling through your mind 24/7.
+        </div>
+        </div>
+        
+        <div class="sub_card">
+        <div class="card card_4"> 
+            <img src="" alt="not available">
+            <figcaption>
+                "Kings right hand man"
+            </figcaption>
+        </div>
+        <div class="description">
+            Having as much power and knowing everything the kings knows is just as good as being king. A rigt hand man who will do anyting for his king.
+        </div>
+        </div>
+
+        <div class="sub_card">
+        <div class="card card_5"> 
+            <img src="" alt="not available">
+            <figcaption>
+                "The aliens"
+            </figcaption>
+        </div>
+        <div class="description">
+            These soldiers along with he right hand man will do anything for the king. They are happy to be the first line of defence and are some of the srongest around. They are not just soldiers but some of the strongest warriors.
+        </div>
+        </div>
+
+        <div class="sub_card">
+        <div class="card card_6"> 
+            <img src="" alt="not available">
+            <figcaption>
+                "The elite aliens"
+            </figcaption>
+        </div>
+        <div class="description">
+            The second line of defence befre you reach the right hand man. They are just as loyal to the king as the first line of defence and the right hand man. They are stronger than the first line of defence. A force to be rekond with.
+        </div>
+        </div>
+    </div>
+</section>
+
+<section id="powers">
+    <p>
+        <h1>Powers</h1>
+       
+    </p>
+</section>
+
+<section id="villians">
+    <p>
+        <h1>Villians</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi illum sed adipisci ex. Laboriosam voluptate maiores officiis ipsum laudantium quia minus, obcaecati nisi soluta doloremque enim, consectetur placeat asperiores.
+        Sit debitis quod adipisci sed quasi labore minima, possimus repellendus architecto tenetur obcaecati dignissimos molestiae quaerat ex ullam dolore ratione perferendis velit, alias est esse illum dolorum cupiditate voluptatum. Tenetur?
+        Facilis nobis magni itaque maiores sed necessitatibus distinctio a! Aliquid, accusantium. Quos odio rerum enim officia explicabo fugit, dolor totam. Deserunt officia tempora aspernatur provident dignissimos ipsam. Porro, laboriosam cupiditate?
+    </p>
+</section>
+
+<section id="plot">
+    <p>
+        <h1>Plot</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi illum sed adipisci ex. Laboriosam voluptate maiores officiis ipsum laudantium quia minus, obcaecati nisi soluta doloremque enim, consectetur placeat asperiores.
+        Sit debitis quod adipisci sed quasi labore minima, possimus repellendus architecto tenetur obcaecati dignissimos molestiae quaerat ex ullam dolore ratione perferendis velit, alias est esse illum dolorum cupiditate voluptatum. Tenetur?
+        Facilis nobis magni itaque maiores sed necessitatibus distinctio a! Aliquid, accusantium. Quos odio rerum enim officia explicabo fugit, dolor totam. Deserunt officia tempora aspernatur provident dignissimos ipsam. Porro, laboriosam cupiditate?
+    </p>
+</section>
+
+</body>
+
+<footer>
+    <p>
+        &copy;Super hero
+    </p>
+</footer>
+</html>
