@@ -1,0 +1,7 @@
+bmi_weights = [
+            'Being underweight could mean that your body may not be getting the nutrients it needs to build healthy bones, skin and hair. This could be because of malnutrition, genetics or a medical illness. However, there are intervetions doctors can recommend to gain weight.\nBeing underweight does come with a number of riks such as\n Osteoporosis\n Skin,teeth or hair problems\nFrequently getting sick\nTiredness\nIrregular periodscould\nPremature birth\nSlow or impaired growth',
+
+            'Being overweight can cause alot of health problems from reproductive and respiratory function, memory and mood.\nExcess weight can icrease your chances of dibetes, heart disease, high or low cholesterol and some cancers.\nTThese health complications are dues to the stress on your body of carrying extra weight and complex changes in hormones and metabolism. ',
+
+            'Being obese can cause alot of health problems from reproductive and respiratory function, memory and mood.\nExcess weight can icrease your chances of dibetes, heart disease, high or low cholesterol and some cancers.\nTThese health complications are dues to the stress on your body of carrying extra weight and complex changes in hormones and metabolism.'
+        ]
