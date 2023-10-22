@@ -1,5 +1,5 @@
 # ZanelesProjects
 My first few projects.
-My name is Zanele Maseko and I am a 20-year-old male. I have been coding since February 2023. I have learned the basics of HTML, CSS, JavaScript, and Python. 
+My name is Zanele Maseko. I have been coding since February 2023. I have learned the basics of HTML, CSS, JavaScript, and Python. 
 I have produced a few projects by myself to test and improve my coding skills.
-I am currently self-teaching myself and using resources at my disposal like free online courses through udacity, freecodecamp, and, lewagon.
+I am currently teaching myself and using resources at my disposal like free online courses through udacity, freecodecamp, and, lewagon.
